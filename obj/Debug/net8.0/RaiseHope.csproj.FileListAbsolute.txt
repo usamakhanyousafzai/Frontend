@@ -1,0 +1,7 @@
+E:\RaiseHope development\RaiseHope\obj\Debug\net8.0\RaiseHope.GeneratedMSBuildEditorConfig.editorconfig
+E:\RaiseHope development\RaiseHope\obj\Debug\net8.0\RaiseHope.AssemblyInfoInputs.cache
+E:\RaiseHope development\RaiseHope\obj\Debug\net8.0\RaiseHope.AssemblyInfo.cs
+E:\RaiseHope development\RaiseHope\obj\Debug\net8.0\RaiseHope.csproj.CoreCompileInputs.cache
+E:\RaiseHope development\RaiseHope\obj\Debug\net8.0\RaiseHope.MvcApplicationPartsAssemblyInfo.cache
+E:\RaiseHope development\RaiseHope\obj\Debug\net8.0\RaiseHope.RazorAssemblyInfo.cache
+E:\RaiseHope development\RaiseHope\obj\Debug\net8.0\RaiseHope.RazorAssemblyInfo.cs
