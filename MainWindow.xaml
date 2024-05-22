@@ -1,0 +1,98 @@
+﻿<Window x:Class="RaiseHope.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RaiseHope" Height="600" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/mountains-1112911_1280-ezgif.com-webp-to-jpg-converter.jpg" />
+    </Window.Background>
+    <Grid>
+        <Grid x:Name="RoleSelectionGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <Button Content="Admin Login" Width="200" Height="40" Margin="10" Click="AdminLogin_Click"/>
+                <Button Content="Donor Login" Width="200" Height="40" Margin="10" Click="DonorLogin_Click"/>
+                <Button Content="Receptor Login" Width="200" Height="40" Margin="10" Click="ReceptorLogin_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="LoginSignupGrid" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TabControl>
+                <!-- Login Tab -->
+                <TabItem Header="Login">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Username:" Margin="10"/>
+                        <TextBox Grid.Row="0" Margin="100,10,10,10" Width="300" Name="UsernameTextBox"/>
+                        <TextBlock Grid.Row="1" Text="Password:" Margin="10"/>
+                        <PasswordBox Grid.Row="1" Margin="100,10,10,10" Width="300" Name="PasswordBox"/>
+                        <Button Grid.Row="2" Content="Login" Margin="10" Click="Login_Click"/>
+                    </Grid>
+                </TabItem>
+
+                <!-- Signup Tab -->
+                <TabItem Header="Signup">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="First Name:" Margin="10"/>
+                        <TextBox Grid.Row="0" Margin="100,10,10,10" Width="300" Name="FirstNameTextBox"/>
+                        <TextBlock Grid.Row="1" Text="Last Name:" Margin="10"/>
+                        <TextBox Grid.Row="1" Margin="100,10,10,10" Width="300" Name="LastNameTextBox"/>
+                        <TextBlock Grid.Row="2" Text="Email:" Margin="10"/>
+                        <TextBox Grid.Row="2" Margin="100,10,10,10" Width="300" Name="EmailTextBox"/>
+                        <TextBlock Grid.Row="3" Text="Username:" Margin="10"/>
+                        <TextBox Grid.Row="3" Margin="100,10,10,10" Width="300" Name="SignupUsernameTextBox"/>
+                        <TextBlock Grid.Row="4" Text="Password:" Margin="10"/>
+                        <PasswordBox Grid.Row="4" Margin="100,10,10,10" Width="300" Name="SignupPasswordBox"/>
+                        <TextBlock Grid.Row="5" Text="Confirm Password:" Margin="10"/>
+                        <PasswordBox Grid.Row="5" Margin="100,10,10,10" Width="300" Name="ConfirmPasswordBox"/>
+                        <TextBlock Grid.Row="6" Text="Gender:" Margin="10"/>
+                        <ComboBox Grid.Row="6" Margin="100,10,10,10" Width="300" Name="GenderComboBox">
+                            <ComboBoxItem Content="Male"/>
+                            <ComboBoxItem Content="Female"/>
+                            <ComboBoxItem Content="Custom"/>
+                        </ComboBox>
+                        <TextBlock Grid.Row="7" Text="Date of Birth:" Margin="10"/>
+                        <DatePicker Grid.Row="7" Margin="100,10,10,10" Width="300" Name="DatePicker"/>
+                        <Button Grid.Row="8" Content="Signup" Margin="10" Click="Signup_Click"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+        <Grid x:Name="UserProfileGrid" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="User Profile" FontSize="24" FontWeight="Bold" Margin="10"/>
+                <TextBlock Text="First Name:" Margin="10"/>
+                <TextBlock x:Name="ProfileFirstName" Margin="10"/>
+                <TextBlock Text="Last Name:" Margin="10"/>
+                <TextBlock x:Name="ProfileLastName" Margin="10"/>
+                <TextBlock Text="Email:" Margin="10"/>
+                <TextBlock x:Name="ProfileEmail" Margin="10"/>
+                <TextBlock Text="Gender:" Margin="10"/>
+                <TextBlock x:Name="ProfileGender" Margin="10"/>
+                <TextBlock Text="Date of Birth:" Margin="10"/>
+                <TextBlock x:Name="ProfileDOB" Margin="10"/>
+
+                <!-- Donation History for Donors -->
+                <TextBlock x:Name="DonationHistoryHeader" Text="Donation History:" Margin="10" Visibility="Collapsed"/>
+                <ListBox x:Name="DonationHistoryList" Margin="10" Visibility="Collapsed"/>
+
+                <!-- Received Funds History for Receptors -->
+                <TextBlock x:Name="ReceivedFundsHistoryHeader" Text="Received Funds History:" Margin="10" Visibility="Collapsed"/>
+                <ListBox x:Name="ReceivedFundsHistoryList" Margin="10" Visibility="Collapsed"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
